@@ -1,0 +1,14 @@
+# Dépendances
+node_modules/
+
+# Fichiers compilés
+dist/
+
+# Secrets
+.env
+const.ts
+
+# Logs et fichiers système
+*.log
+.DS_Store
+Thumbs.db

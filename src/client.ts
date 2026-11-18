@@ -11,11 +11,11 @@ import type { SendPost } from "./types/sendPost.js";
 export class BuffaloClient {
   private token: string | null = null;
 
-  constructor(private baseUrl = "https://buffalo.sh") {}
 
-  async login(username: string, password: string, email : string): Promise<void> {
-    const reponse = await signin({username,password,email});
+  async login(username: string, password: string, email : string): Promise<LoginResult> {
+    const reponse = await signin({username,email,password});
     this.token = reponse.token;
+    return reponse
   }
   async signup(username :string, password: string,email: string){
     const reponse = await signup({username,password,email})

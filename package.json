@@ -1,9 +1,19 @@
 {
   "name": "buffalo-client",
-  "version": "1.0.2",
-  "description": "a nodejs librarie for buffalo.sh",
+  "version": "1.0.3",
+  "description": "A Node.js library for buffalo.sh",
   "type": "module",
-  "main": "client.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "tsc && node dist/index.js",

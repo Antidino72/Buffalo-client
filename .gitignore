@@ -12,3 +12,6 @@ const.ts
 *.log
 .DS_Store
 Thumbs.db
+
+#Test
+buffalo-test/

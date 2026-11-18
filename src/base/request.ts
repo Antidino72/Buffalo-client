@@ -9,11 +9,5 @@ export async function requete<T>(chemin: string, options: RequestInit = {}): Pro
     },
   });
 
-  if (!reponse.ok) {
-    console.log("test")
-      const texte = await reponse.text();
-    throw new Error(`Erreur API ${reponse.status} : ${texte}`);
-  }
-
   return reponse.json() as Promise<T>;
 }

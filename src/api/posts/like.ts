@@ -1,11 +1,9 @@
 
-import { token } from "../../const.js";
-import type { Post } from "../../types/post.js";
-import { requete } from "../request.js";
+import { requete } from "../../base/request.js";
 import 'dotenv/config';
 
 
-export function likePost(postId: string) {
+export function likePost(postId: string,token : string) {
   const params = new URLSearchParams({ postid: postId });
   return requete<unknown>(`/posts/like?${params.toString()}`, {
     method: "PATCH",

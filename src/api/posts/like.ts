@@ -10,3 +10,10 @@ export function likePost(postId: string,token : string) {
     headers: { Authorization: `Bearer ${token}` },
   });
 }
+export function unlikePost(postId: string,token : string) {
+  const params = new URLSearchParams({ postid: postId });
+  return requete<unknown>(`/posts/unlike?${params.toString()}`, {
+    method: "PATCH",
+    headers: { Authorization: `Bearer ${token}` },
+  });
+}

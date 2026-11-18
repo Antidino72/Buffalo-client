@@ -5,7 +5,7 @@ import "dotenv/config";
 import type { SendPost } from "../../types/sendPost.js";
 
 export function addPost(data : SendPost,token : string) {
-  return requete<Post[]>("/posts/add", {
+  return requete<Post>("/posts/add", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
     body : JSON.stringify(data)

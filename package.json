@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "a nodejs librarie for buffalo.sh",
   "type": "module",
-  "main": "index.js",
+  "main": "client.js",
   "scripts": {
     "build": "tsc",
     "start": "tsc && node dist/index.js",
